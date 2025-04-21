@@ -1,0 +1,13 @@
+$primary: #141414;
+$secondry: #666666;
+$bg-color: #f2f2f2;
+$theme-colors: (
+  primary: #141414,
+);
+
+@each $color, $value in $theme-colors {
+  .text-#{"" + $color} {
+    color: $value !important;
+    font-weight: 600 !important;
+  }
+}

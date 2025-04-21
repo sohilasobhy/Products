@@ -1,0 +1,884 @@
+@import "_Fonts";
+@import "_Mixins";
+@import "_Variables";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "ClashGrotesk", serif;
+  &.show {
+    @media (max-width: 992px) {
+      overflow: hidden;
+    }
+    .filter {
+      @media (max-width: 992px) {
+        @include position(fixed, 0, 0, null, null);
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.596);
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+  }
+  .collapsing {
+    height: 100vh !important;
+  }
+  .sideMenu {
+    &.show {
+      @media (max-width: 992px) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: white;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        padding-top: 1rem;
+      }
+    }
+  }
+  .announce {
+    background-color: $primary;
+    p {
+      @include text-style(#ffffff, 14px, 500);
+      @media (min-width: 992px) {
+        width: 100%;
+      }
+      @media (max-width: 991.86px) and (min-width: 768px) {
+        width: 100%;
+      }
+      @media (max-width: 768px) {
+        width: 81%;
+      }
+      span {
+        background-color: #383838;
+        border-radius: 0.5rem;
+        padding: 0.2rem 0.4rem;
+        @include text-style(#ffffff, 12px, 500);
+      }
+    }
+  }
+  nav {
+    border-bottom: 0.5px dashed #a3a3a3;
+    overflow-x: hidden;
+    .nav-item,
+    .search,
+    .closeMenu {
+      cursor: pointer;
+      .nav-link {
+        @include text-style($primary, 16px, 500);
+      }
+    }
+    .navbar-toggler {
+      &:focus {
+        box-shadow: 0 0 0;
+      }
+    }
+  }
+  .links {
+    color: $secondry;
+    a {
+      text-decoration: none;
+    }
+    .pastLinks {
+      @include text-style($secondry, null, 500);
+      @media (min-width: 992px) {
+        font-size: 16px;
+      }
+      @media (max-width: 991.86px) and (min-width: 768px) {
+        font-size: 14px;
+      }
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
+    }
+    .current {
+      @include text-style($primary, 16px, 500);
+      @media (min-width: 992px) {
+        font-size: 16px;
+      }
+      @media (max-width: 991.86px) and (min-width: 768px) {
+        font-size: 15px;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .oneProduct {
+    gap: 6rem;
+    border-bottom: 0.5px dashed #a3a3a3;
+    .sliderCon {
+      .gallery-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        @media (min-width: 992px) {
+          max-width: 450px;
+        }
+        @media (max-width: 991.86px) and (min-width: 768px) {
+          max-width: 450px;
+        }
+        @media (max-width: 768px) {
+          width: 60%;
+        }
+        .main-swiper {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 10px;
+          .swiper-slide {
+            background-color: $bg-color;
+            border-radius: 8px;
+          }
+          img {
+            width: 100%;
+            border-radius: 8px;
+          }
+        }
+        .thumb-swiper {
+          width: 100%;
+          box-sizing: border-box;
+          .swiper-slide {
+            height: fit-content !important;
+            cursor: pointer;
+            background-color: #ebebeb;
+            border-radius: 8px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+          }
+        }
+        .swiper-button-prev,
+        .swiper-button-next,
+        .share,
+        .heart {
+          background-color: $bg-color;
+          border-radius: 8px;
+          z-index: 10;
+          top: auto;
+          color: $primary;
+          @media (min-width: 992px) {
+            width: 50px;
+            height: 50px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            width: 50px;
+            height: 50px;
+          }
+          @media (max-width: 768px) {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .btnsCon,
+        .share,
+        .heart {
+          position: absolute;
+          transform: translateY(-50%);
+          right: -60px;
+          i {
+            @media (min-width: 992px) {
+              font-size: 25px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 20px;
+            }
+            @media (max-width: 768px) {
+              font-size: 16px;
+            }
+          }
+        }
+        .btnsCon {
+          bottom: 10%;
+        }
+        .swiper-button-next {
+          bottom: 13%;
+          position: static;
+        }
+        .swiper-button-prev {
+          left: auto;
+          bottom: calc(28% - 30px);
+          position: static;
+        }
+        .swiper-button-prev.swiper-button-disabled,
+        .swiper-button-next.swiper-button-disabled {
+          opacity: 1 !important;
+        }
+        .share {
+          top: 25px;
+        }
+        .heart {
+          top: 90px;
+        }
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+          @media (min-width: 992px) {
+            font-size: 25px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 20px;
+          }
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+      }
+      @media (min-width: 992px) {
+        width: 40%;
+      }
+      @media (max-width: 991.86px) {
+        width: 100%;
+      }
+    }
+    .productDetails {
+      .top {
+        border-bottom: 1px dashed $primary;
+        .productName {
+          @include text-style($secondry, null, 500);
+          @media (min-width: 992px) {
+            font-size: 16px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 15px;
+          }
+          @media (max-width: 768px) {
+            font-size: 13px;
+          }
+        }
+        h2 {
+          @media (min-width: 992px) {
+            font-size: 36px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 30px;
+          }
+          @media (max-width: 768px) {
+            font-size: 23px;
+          }
+        }
+        .price {
+          .oldPrice {
+            @include text-style($secondry, null, 500);
+            text-decoration: line-through;
+            @media (min-width: 992px) {
+              font-size: 18px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 16px;
+            }
+            @media (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
+          .currentPrice {
+            @include text-style($primary, null, 600);
+            @media (min-width: 992px) {
+              font-size: 28px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 24px;
+            }
+            @media (max-width: 768px) {
+              font-size: 20px;
+            }
+          }
+        }
+        .soldItems {
+          @include text-style($secondry, null, 400);
+          @media (min-width: 992px) {
+            font-size: 20px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 18px;
+          }
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+        .dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #e0e0e0;
+        }
+        .rate {
+          i {
+            color: #ffa439;
+            @media (min-width: 992px) {
+              font-size: 18px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 16px;
+            }
+            @media (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
+          .ratingNumber {
+            @include text-style($primary, null, 600);
+            @media (min-width: 992px) {
+              font-size: 24px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 22px;
+            }
+            @media (max-width: 768px) {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .Description {
+        h4 {
+          @include text-style($primary, null, 600);
+          @media (min-width: 992px) {
+            font-size: 20px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 19px;
+          }
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
+        }
+        #text {
+          @include text-style($secondry, null, 400);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          &.expanded {
+            -webkit-line-clamp: unset !important;
+            max-height: none;
+          }
+          @media (min-width: 992px) {
+            font-size: 16px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 15px;
+          }
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
+        #toggle-btn {
+          cursor: pointer;
+        }
+      }
+      .colorCon {
+        .color {
+          @include text-style($secondry, null, 500);
+          span {
+            @include text-style($primary, null, 600);
+            @media (min-width: 992px) {
+              font-size: 20px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 19px;
+            }
+            @media (max-width: 768px) {
+              font-size: 18px;
+            }
+          }
+          @media (min-width: 992px) {
+            font-size: 20px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 19px;
+          }
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
+        }
+        .colorSelection {
+          .color-btn {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 75px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input {
+              display: none;
+            }
+            label {
+              width: 75px;
+              height: 40px;
+              border-radius: 8px;
+              &.color1 {
+                background-color: #534029;
+              }
+              &.color2 {
+                background-color: #ebebeb;
+              }
+              &.color3 {
+                background-color: #3a6a90;
+              }
+              &.color4 {
+                background-color: #11171d;
+              }
+            }
+            &:has(input:checked) {
+              border: 1px solid $primary;
+            }
+            input:checked + label {
+              width: 63px;
+              height: 28px;
+            }
+          }
+        }
+      }
+      .sizeCon {
+        .head {
+          .size {
+            @include text-style($secondry, null, 500);
+            @media (min-width: 992px) {
+              font-size: 20px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 19px;
+            }
+            @media (max-width: 768px) {
+              font-size: 18px;
+            }
+            span {
+              @include text-style($primary, null, 600);
+              @media (min-width: 992px) {
+                font-size: 20px;
+              }
+              @media (max-width: 991.86px) and (min-width: 768px) {
+                font-size: 19px;
+              }
+              @media (max-width: 768px) {
+                font-size: 18px;
+              }
+            }
+          }
+          a {
+            @include text-style($primary, 16px, 500);
+          }
+        }
+        .sizeSelection {
+          .size-btn {
+            background-color: #ffffff;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            width: 75px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input {
+              display: none;
+            }
+            label {
+              @include text-style($primary, 20px, #525252);
+            }
+            &:has(input:checked) {
+              border: 1px solid $primary;
+              background-color: #ebebeb;
+            }
+            input:checked + label {
+              @include text-style($primary, 20px, 600);
+            }
+          }
+        }
+      }
+      .btns {
+        .addToCart {
+          background-color: $primary;
+          border: 0;
+          border-radius: 8px;
+          padding: 17px 0;
+          @include text-style(#ffffff, 20px, 600);
+          align-self: flex-start;
+          @media (min-width: 992px) {
+            width: 60%;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            width: 60%;
+          }
+          @media (max-width: 768px) and (min-width: 350px) {
+            width: 300px;
+          }
+          @media (max-width: 350px) {
+            width: 100%;
+          }
+        }
+        .checkout {
+          background-color: #ffffff;
+          border: 1px solid #b8b8b8;
+          border-radius: 8px;
+          padding: 17px 0;
+          @include text-style($primary, 20px, 500);
+          @media (min-width: 992px) {
+            width: 30%;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            width: 30%;
+          }
+          @media (max-width: 768px) {
+            width: 190px;
+            align-self: flex-start;
+          }
+        }
+      }
+      .delivery {
+        @include text-style($secondry, 16px, 500);
+      }
+      @media (min-width: 992px) {
+        width: 50%;
+      }
+      @media (max-width: 991.86px) {
+        width: 100%;
+      }
+    }
+  }
+  .relatedProducts {
+    border-bottom: 0.5px dashed $secondry;
+    .header {
+      p {
+        font-size: 28px;
+      }
+      a {
+        @include text-style($secondry, 16px, 500);
+      }
+    }
+    .allProducts {
+      .singleProduct {
+        .imgCon {
+          background-color: $bg-color;
+          display: flex;
+          justify-content: center;
+          border-radius: 8px;
+          img {
+            width: 100%;
+          }
+          @media (min-width: 992px) {
+            max-width: 250px;
+          }
+        }
+        .proName {
+          @media (min-width: 992px) {
+            font-size: 18px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 16px;
+          }
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
+        .proPrice {
+          @media (min-width: 992px) {
+            font-size: 20px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 18px;
+          }
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+        .desc {
+          @include text-style($secondry, null, 400);
+          @media (min-width: 992px) {
+            font-size: 16px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 14px;
+          }
+          @media (max-width: 768px) {
+            font-size: 13px;
+          }
+        }
+        .soldItems {
+          @include text-style($secondry, null, 400);
+          @media (min-width: 992px) {
+            font-size: 16px;
+          }
+          @media (max-width: 991.86px) and (min-width: 768px) {
+            font-size: 14px;
+          }
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+        .dot {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: #e0e0e0;
+        }
+        .rate {
+          i {
+            color: #ffa439;
+            @media (min-width: 992px) {
+              font-size: 18px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 16px;
+            }
+            @media (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
+          .ratingNumber {
+            @include text-style($primary, null, 400);
+            @media (min-width: 992px) {
+              font-size: 16px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 14px;
+            }
+            @media (max-width: 768px) {
+              font-size: 12px;
+            }
+          }
+        }
+        @media (min-width: 992px) {
+          width: 19%;
+        }
+        @media (max-width: 991.86px) {
+          width: 45%;
+        }
+      }
+    }
+  }
+  .reviews {
+    h2 {
+      @media (min-width: 992px) {
+        font-size: 28px;
+      }
+      @media (max-width: 991.86px) and (min-width: 768px) {
+        font-size: 26px;
+      }
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+    .ratingSection {
+      border: 0.8px dashed $secondry;
+      border-radius: 4px;
+      .reviewsNumber {
+        .circle {
+          width: 84px;
+          height: 84px;
+          border-radius: 50%;
+          background: conic-gradient(
+            #ffa439 0% 10%,
+            #e0e0e0 10% 30%,
+            #ffa439 30% 100%
+          );
+          .innerCircle {
+            background-color: white;
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            p {
+              @media (min-width: 992px) {
+                font-size: 20px;
+              }
+              @media (max-width: 991.86px) and (min-width: 768px) {
+                font-size: 19px;
+              }
+              @media (max-width: 768px) {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .stars {
+          i {
+            color: #ffa439;
+          }
+          p {
+            @include text-style($secondry, null, 400);
+            @media (min-width: 992px) {
+              font-size: 16px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 14px;
+            }
+            @media (max-width: 768px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .ratingNumber {
+        .oneRating {
+          width: 100%;
+          .starNum {
+            p {
+              @include text-style($primary, null, 500);
+              @media (min-width: 992px) {
+                font-size: 16px;
+              }
+              @media (max-width: 991.86px) and (min-width: 768px) {
+                font-size: 14px;
+              }
+              @media (max-width: 768px) {
+                font-size: 12px;
+              }
+            }
+            i {
+              color: #ffa439;
+            }
+          }
+          .ratingCon {
+            background-color: $bg-color;
+            height: 8px;
+            border-radius: 8px;
+            width: 85%;
+            .ratingfill {
+              background-color: $primary;
+              height: 100%;
+              border-radius: 8px;
+            }
+          }
+          .reviewers {
+            @include text-style($primary, null, 500);
+            @media (min-width: 992px) {
+              font-size: 16px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 14px;
+            }
+            @media (max-width: 768px) {
+              font-size: 12px;
+            }
+          }
+        }
+        @media (min-width: 992px) {
+          width: 70%;
+        }
+        @media (max-width: 991.86px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  footer {
+    background-color: $bg-color;
+    .container {
+      .footerTop {
+        border-bottom: 1px dashed $secondry;
+        .left {
+          .logo {
+            width: 170px;
+          }
+          .emailAndSocial {
+            .emailCon {
+              @include text-style($secondry, 16px, 500);
+              width: fit-content;
+              border-bottom: 0.5px solid $primary;
+              input {
+                width: 215px;
+                background-color: transparent;
+                color: $secondry;
+                border: 0;
+                &:focus {
+                  outline: 0;
+                }
+              }
+              .arrowCon {
+                width: 50px;
+                height: 30px;
+                border-radius: 8px;
+                background-color: $primary;
+                i {
+                  color: white;
+                }
+              }
+            }
+            .socialCon {
+              .iconCon {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                img {
+                  width: 18px;
+                  height: 18px;
+                }
+              }
+            }
+          }
+        }
+        .right {
+          .head {
+            @media (min-width: 992px) {
+              font-size: 14px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              font-size: 16px;
+            }
+            @media (max-width: 768px) {
+              font-size: 18px;
+            }
+          }
+          a {
+            @include text-style($secondry, 14px, 400);
+          }
+          .linksCon {
+            @media (min-width: 992px) {
+              width: auto;
+            }
+            @media (max-width: 991.86px) {
+              width: 130px;
+            }
+          }
+          @media (min-width: 992px) {
+            width: 50%;
+          }
+          @media (max-width: 991.86px) {
+            width: 100%;
+          }
+        }
+      }
+      .bottomLine {
+        .copyRights {
+          @include text-style(#3e3e59, 14px, 400);
+        }
+        .selectGroup {
+          width: 50%;
+          align-self: flex-end;
+          justify-content: flex-end;
+          select {
+            @include text-style($primary, 14px, 500);
+            width: fit-content;
+            &:focus {
+              box-shadow: 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

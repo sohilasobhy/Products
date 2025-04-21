@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/Style/Index.css" />
+    <title>Product</title>
+  </head>
+  <body>
+    <div class="filter"></div>
+    <div class="announce d-flex justify-content-center p-3">
+      <p class="text-center">
+        New season coming! Discount 10% for all product! Checkout Now!
+        <span class="ms-3">20:40</span>
+      </p>
+    </div>
+    <div class="container mt-3">
+      <nav
+        class="navbar navbar-expand-md navbar-light justify-content-between pb-3"
+      >
+        <img src="assets/Images/image 16.svg" alt="logo" class="logo" />
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-search search d-md-none d-block"></i>
+          <i class="bi bi-basket3 d-md-none d-block"></i>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div
+          class="collapse navbar-collapse justify-content-end sideMenu animate__animated animate__fadeInRight"
+          id="navbarSupportedContent"
+        >
+          <div class="d-flex justify-content-end pe-3 d-md-none closeMenu">
+            <i class="bi bi-x-circle-fill d-lg-none" id="closeMenu"></i>
+          </div>
+          <ul class="navbar-nav mr-auto align-items-center gap-4 mt-md-0 mt-3">
+            <i class="bi bi-search search"></i>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle p-0"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item active d-flex align-items-center">
+              <i class="bi bi-person"></i>
+              <a class="nav-link p-0" href="#">Sign in </a>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-heart"></i>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-basket3"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="py-3 d-flex align-items-center gap-2 flex-wrap links">
+        <a href="#" class="pastLinks">Homepage</a>
+        >
+        <a href="#" class="pastLinks">Women</a>
+        >
+        <a href="#" class="pastLinks">Women's Shirts & Tops</a>
+        >
+        <a href="#" class="current">Long Sleeve Overshirt, Khaki, 6</a>
+      </div>
+      <div
+        class="oneProduct d-flex flex-lg-row flex-column justify-content-between pb-5"
+      >
+        <div class="sliderCon">
+          <div class="gallery-container">
+            <div class="swiper main-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/Images/img1.png" alt="img1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/Images/img2.png" alt="img2" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/Images/img3.png" alt="img3" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/Images/img4.png" alt="img4" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/Images/img5.png" alt="img5" />
+                </div>
+              </div>
+            </div>
+            <div class="heart d-flex justify-content-center align-items-center">
+              <i class="bi-heart"></i>
+            </div>
+            <div class="share d-flex justify-content-center align-items-center">
+              <i class="bi bi-box-arrow-up"></i>
+            </div>
+            <div class="d-flex flex-column gap-md-5 gap-4 btnsCon">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper thumb-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="assets/Images/img1.png"
+                    alt="img1"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/Images/img2.png" alt="img2" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/Images/img3.png" alt="img3" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/Images/img4.png" alt="img4" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/Images/img5.png" alt="img5" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productDetails">
+          <div class="top pb-4">
+            <p class="productName">John Lewis ANYDAY</p>
+            <h2 class="text-primary mt-3">Long Sleeve Overshirt, Khaki, 6</h2>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div class="d-flex price align-items-center gap-3">
+                <p class="oldPrice">£40.00</p>
+                <p class="currentPrice">£28.00</p>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <p class="soldItems">1,238 Sold</p>
+                <div class="dot"></div>
+                <div class="rate d-flex align-items-center gap-1">
+                  <i class="bi-star-fill star"></i>
+                  <p class="ratingNumber">4.5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-between h-75 gap-lg-0 gap-4"
+          >
+            <div class="Description mt-3">
+              <h4>Description:</h4>
+              <div>
+                <p id="text">
+                  Boba etiam ut bulla tea est potus dilectus singulari
+                  compositione saporum et textuum, quae in Taiwan annis 1980
+                  orta sunt. Boba refert ad pilas masticas tapiocas in fundo
+                  potus inventas, quae typice lacte tea nigro sapiuntur. Boba
+                  phaenomenon. Boba etiam ut bulla tea est potus dilectus
+                  singulari compositione saporum et textuum, quae in Taiwan
+                  annis 1980 orta sunt. Boba refert ad pilas masticas tapiocas
+                  in fundo potus inventas, quae typice lacte tea nigro
+                  sapiuntur. Boba phaenomenon.
+                </p>
+                <span id="toggle-btn" class="text-primary">See more</span>
+              </div>
+            </div>
+            <div class="colorCon">
+              <p class="color">Color: <span>Royal Brown</span></p>
+              <div
+                class="d-flex gap-4 colorSelection flex-lg-nowrap flex-wrap mt-3"
+              >
+                <div class="color-btn">
+                  <input type="radio" name="color" id="choice1" checked />
+                  <label for="choice1" class="color1"></label>
+                </div>
+                <div class="color-btn">
+                  <input type="radio" name="color" id="choice2" />
+                  <label for="choice2" class="color2"></label>
+                </div>
+                <div class="color-btn">
+                  <input type="radio" name="color" id="choice3" />
+                  <label for="choice3" class="color3"></label>
+                </div>
+                <div class="color-btn">
+                  <input type="radio" name="color" id="choice4" />
+                  <label for="choice4" class="color4"></label>
+                </div>
+              </div>
+            </div>
+            <div class="sizeCon">
+              <div
+                class="head d-flex justify-content-between align-items-center"
+              >
+                <p class="size">Size: <span>8</span></p>
+                <a href="#" class="d-lg-block d-none">View Size Chart</a>
+              </div>
+              <div
+                class="d-flex gap-4 sizeSelection mt-3 flex-lg-nowrap flex-wrap"
+              >
+                <div class="size-btn">
+                  <input type="radio" name="size" id="size1" />
+                  <label for="size1" class="size1">6</label>
+                </div>
+                <div class="size-btn">
+                  <input type="radio" name="size" id="size2" checked />
+                  <label for="size2" class="size2">8</label>
+                </div>
+                <div class="size-btn">
+                  <input type="radio" name="size" id="size3" />
+                  <label for="size3" class="size3">10</label>
+                </div>
+                <div class="size-btn">
+                  <input type="radio" name="size" id="size4" />
+                  <label for="size4" class="size4">14</label>
+                </div>
+                <div class="size-btn">
+                  <input type="radio" name="size" id="size5" />
+                  <label for="size5" class="size5">18</label>
+                </div>
+                <div class="size-btn">
+                  <input type="radio" name="size" id="size6" />
+                  <label for="size6" class="size6">20</label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="btns d-flex flex-md-row flex-column align-items-center justify-content-between gap-4"
+            >
+              <button class="addToCart">Add To Cart</button>
+              <button class="checkout">Checkout Now</button>
+            </div>
+            <a class="delivery d-lg-block d-none">Delivery T&C</a>
+          </div>
+        </div>
+      </div>
+      <div class="relatedProducts py-5">
+        <div class="d-flex justify-content-between align-items-center header">
+          <p class="text-primary">Related Product</p>
+          <a href="#">View All</a>
+        </div>
+        <div class="mt-3 allProducts w-100">
+          <div
+            class="d-flex justify-content-between gap-4 w-100 flex-lg-nowrap flex-wrap"
+          >
+            <div class="singleProduct d-flex flex-column gap-2">
+              <div class="imgCon w-100">
+                <img
+                  src="assets/Images/pro1.png"
+                  alt="product1"
+                  class="img-fluid"
+                />
+              </div>
+              <p class="proName text-primary">Whistle</p>
+              <p class="proPrice text-primary">$26</p>
+              <p class="desc">Wide Leg Cropped Jeans, Denim</p>
+              <div class="d-flex align-items-center gap-2">
+                <div class="rate d-flex align-items-center gap-1">
+                  <i class="bi-star-fill"></i>
+                  <p class="ratingNumber">4.8</p>
+                </div>
+                <div class="dot"></div>
+                <p class="soldItems">1,238 Sold</p>
+              </div>
+            </div>
+            <div class="singleProduct d-flex flex-column gap-2">
+              <div class="imgCon w-100">
+                <img
+                  src="assets/Images/5434441dcbb22acc3badb1460deb6ac9.pngpro2.png"
+                  alt="product2"
+                  class="img-fluid"
+                />
+              </div>
+              <p class="proName text-primary">John Lewis ANYDAY</p>
+              <p class="proPrice text-primary">$26</p>
+              <p class="desc">Long Sleeve Utility Shirt, Navy, 6</p>
+              <div class="d-flex align-items-center gap-2">
+                <div class="rate d-flex align-items-center gap-1">
+                  <i class="bi-star-fill fs-4"></i>
+                  <p class="ratingNumber">4.8</p>
+                </div>
+                <div class="dot"></div>
+                <p class="soldItems">1,238 Sold</p>
+              </div>
+            </div>
+            <div class="singleProduct d-flex flex-column gap-2">
+              <div class="imgCon w-100">
+                <img
+                  src="assets/Images/pro3.png"
+                  alt="product3"
+                  class="img-fluid"
+                />
+              </div>
+              <p class="proName text-primary">John Lewis ANYDAY</p>
+              <p class="proPrice text-primary">$32</p>
+              <p class="desc">Stripe Curved Hem Shirt, Blue</p>
+              <div class="d-flex align-items-center gap-2">
+                <div class="rate d-flex align-items-center gap-1">
+                  <i class="bi-star-fill fs-4"></i>
+                  <p class="ratingNumber">4.5</p>
+                </div>
+                <div class="dot"></div>
+                <p class="soldItems">620 Sold</p>
+              </div>
+            </div>
+            <div class="singleProduct d-flex flex-column gap-2">
+              <div class="imgCon w-100">
+                <img
+                  src="assets/Images/pro4.png"
+                  alt="product4"
+                  class="Stripe Curved Hem Shirt, Blue"
+                />
+              </div>
+              <p class="proName text-primary">John Lewis ANYDAY</p>
+              <p class="proPrice text-primary">$40</p>
+              <p class="desc">Denim Overshirt, Mid Wash</p>
+              <div class="d-flex align-items-center gap-2">
+                <div class="rate d-flex align-items-center gap-1">
+                  <i class="bi-star-fill fs-4"></i>
+                  <p class="ratingNumber">4.6</p>
+                </div>
+                <div class="dot"></div>
+                <p class="soldItems">238 Sold</p>
+              </div>
+            </div>
+            <div class="singleProduct d-flex flex-column gap-2">
+              <div class="imgCon w-100">
+                <img
+                  src="assets/Images/pro5.png"
+                  alt="product5"
+                  class="img-fluid"
+                />
+              </div>
+              <p class="proName text-primary">John Lewis</p>
+              <p class="proPrice text-primary">$79</p>
+              <p class="desc">Linen Blazer, Navy</p>
+              <div class="d-flex align-items-center gap-2">
+                <div class="rate d-flex align-items-center gap-1">
+                  <i class="bi-star-fill fs-4"></i>
+                  <p class="ratingNumber">4.8</p>
+                </div>
+                <div class="dot"></div>
+                <p class="soldItems">1,238 Sold</p>
+              </div>
+            </div>
+            <div class="singleProduct d-lg-none d-flex flex-column gap-2">
+              <div class="imgCon w-100">
+                <img
+                  src="assets/Images/pro6.png"
+                  alt="product6"
+                  class="img-fluid"
+                />
+              </div>
+              <p class="proName text-primary">John Lewis ANYDAY</p>
+              <p class="proPrice text-primary">$26</p>
+              <p class="desc">Long Sleeve Utility Shirt, Navy, 6</p>
+              <div class="d-flex align-items-center gap-2">
+                <div class="rate d-flex align-items-center gap-1">
+                  <i class="bi-star-fill fs-4"></i>
+                  <p class="ratingNumber">4.8</p>
+                </div>
+                <div class="dot"></div>
+                <p class="soldItems">1,238 Sold</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews py-5">
+        <h2 class="text-primary">Product Reviews</h2>
+        <div
+          class="mt-3 ratingSection p-3 d-flex flex-lg-row flex-column justify-content-between gap-lg-0 gap-4 w-100"
+        >
+          <div class="reviewsNumber d-flex align-items-center gap-3">
+            <div
+              class="circle d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="innerCircle d-flex justify-content-center align-items-center"
+              >
+                <p class="text-primary">4.5</p>
+              </div>
+            </div>
+            <div class="stars">
+              <div class="d-flex align-items-center gap-1">
+                <i class="bi-star-fill"></i>
+                <i class="bi-star-fill"></i>
+                <i class="bi-star-fill"></i>
+                <i class="bi-star-fill"></i>
+                <i class="bi-star-fill"></i>
+              </div>
+              <p>from 1,25k reviews</p>
+            </div>
+          </div>
+          <div class="ratingNumber">
+            <div
+              class="d-flex align-items-center gap-4 align-items-end oneRating"
+            >
+              <div class="d-flex align-items-center gap-1 starNum">
+                <p>5.0</p>
+                <i class="bi-star-fill"></i>
+              </div>
+              <div class="ratingCon">
+                <div class="ratingfill" style="width: 80%"></div>
+              </div>
+              <p class="reviewers">2823</p>
+            </div>
+            <div
+              class="d-flex align-items-center gap-4 align-items-end oneRating mt-2"
+            >
+              <div class="d-flex align-items-center gap-1 starNum">
+                <p>4.0</p>
+                <i class="bi-star-fill"></i>
+              </div>
+              <div class="ratingCon">
+                <div class="ratingfill" style="width: 25%"></div>
+              </div>
+              <p class="reviewers">38</p>
+            </div>
+            <div
+              class="d-flex align-items-center gap-4 align-items-end oneRating mt-2"
+            >
+              <div class="d-flex align-items-center gap-1 starNum">
+                <p>3.0</p>
+                <i class="bi-star-fill"></i>
+              </div>
+              <div class="ratingCon">
+                <div class="ratingfill" style="width: 10%"></div>
+              </div>
+              <p class="reviewers">4</p>
+            </div>
+            <div
+              class="d-flex align-items-center gap-4 align-items-end oneRating mt-2"
+            >
+              <div class="d-flex align-items-center gap-1 starNum">
+                <p>2.0</p>
+                <i class="bi-star-fill"></i>
+              </div>
+              <div class="ratingCon">
+                <div class="ratingfill" style="width: 0"></div>
+              </div>
+              <p class="reviewers">0</p>
+            </div>
+            <div
+              class="d-flex align-items-center gap-4 align-items-end oneRating mt-2"
+            >
+              <div class="d-flex align-items-center gap-1 starNum">
+                <p>1.0</p>
+                <i class="bi-star-fill"></i>
+              </div>
+              <div class="ratingCon">
+                <div class="ratingfill" style="width: 0"></div>
+              </div>
+              <p class="reviewers">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="pt-5 pb-4">
+      <div class="container">
+        <div
+          class="d-flex flex-lg-row flex-column justify-content-between gap-lg-0 gap-4 pb-5 footerTop"
+        >
+          <div
+            class="left d-flex flex-column justify-content-between gap-lg-0 gap-4"
+          >
+            <img src="assets/Images/image 16.svg" alt="logo" class="logo" />
+            <div class="emailAndSocial">
+              <div class="d-flex align-items-center emailCon gap-2">
+                <input
+                  type="email"
+                  placeholder="Get latest offers to your inbox"
+                />
+                <div
+                  class="arrowCon d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi bi-chevron-right"></i>
+                </div>
+              </div>
+              <div class="socialCon d-flex align-items-center gap-2 mt-3">
+                <div
+                  class="bg-white iconCon d-flex justify-content-center align-items-center"
+                >
+                  <img src="assets/Images/facebook.png" alt="facebook" />
+                </div>
+                <div
+                  class="bg-white iconCon d-flex justify-content-center align-items-center"
+                >
+                  <img src="assets/Images/instagram.png" alt="instagram" />
+                </div>
+                <div
+                  class="bg-white iconCon d-flex justify-content-center align-items-center"
+                >
+                  <img src="assets/Images/twitter.png" alt="twitter" />
+                </div>
+                <div
+                  class="bg-white iconCon d-flex justify-content-center align-items-center"
+                >
+                  <img src="assets/Images/envelope.png" alt="envelope" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="right d-flex justify-content-between gap-lg-0 gap-3 flex-lg-nowrap flex-wrap"
+          >
+            <div class="d-flex flex-column gap-2 linksCon">
+              <p class="head text-primary">Shop</p>
+              <a class="text-decoration-none mt-2">My account</a>
+              <a class="text-decoration-none">Login</a>
+              <a class="text-decoration-none">Wishlist</a>
+              <a class="text-decoration-none">Cart</a>
+            </div>
+            <div class="d-flex flex-column gap-2 linksCon">
+              <p class="head text-primary">Information</p>
+              <a class="text-decoration-none mt-2">Shipping Policy</a>
+              <a class="text-decoration-none">Returns & Refunds</a>
+              <a class="text-decoration-none">Cookies Policy</a>
+              <a class="text-decoration-none">Frequently asked</a>
+            </div>
+            <div class="d-flex flex-column gap-2 linksCon">
+              <p class="head text-primary">Company</p>
+              <a class="text-decoration-none mt-2">About us</a>
+              <a class="text-decoration-none">Privacy Policy</a>
+              <a class="text-decoration-none">Terms & Conditions</a>
+              <a class="text-decoration-none">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-lg-row flex-column gap-4 align-items-lg-center align-items-start justify-content-between mt-4 bottomLine"
+        >
+          <p class="copyRights">© John Lewis plc 2001 - 2024</p>
+          <div class="selectGroup d-flex">
+            <div class="selectLanguage d-flex">
+              <img src="assets/Images/Flags.svg" alt="English" />
+              <select
+                class="form-select form-select-sm border-0 bg-transparent"
+              >
+                <option selected>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>German</option>
+              </select>
+            </div>
+            <select class="form-select form-select-sm border-0 bg-transparent">
+              <option selected>USD</option>
+              <option>EUR</option>
+              <option>GBP</option>
+              <option>JPY</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="Index.js"></script>
+  </body>
+</html>
