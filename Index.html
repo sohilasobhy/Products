@@ -84,30 +84,39 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item active d-flex align-items-center">
+            <li class="nav-item active d-flex align-items-center gap-2">
               <i class="bi bi-person"></i>
               <a class="nav-link p-0" href="#">Sign in </a>
             </li>
             <li class="nav-item">
               <i class="bi bi-heart"></i>
             </li>
-            <li class="nav-item">
+            <li class="nav-item position-relative pe-3">
+              <p
+                class="counter d-flex align-items-center justify-content-center"
+              >
+                1
+              </p>
               <i class="bi bi-basket3"></i>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="py-3 d-flex align-items-center gap-2 flex-wrap links">
-        <a href="#" class="pastLinks">Homepage</a>
-        >
-        <a href="#" class="pastLinks">Women</a>
-        >
-        <a href="#" class="pastLinks">Women's Shirts & Tops</a>
-        >
-        <a href="#" class="current">Long Sleeve Overshirt, Khaki, 6</a>
+      <div aria-label="breadcrumb" class="links py-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item pastLinks"><a href="#">Homepage</a></li>
+          <li class="breadcrumb-item pastLinks"><a href="#">Women</a></li>
+          <li class="breadcrumb-item pastLinks">
+            <a href="#">Women's Shirts & Tops</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Long Sleeve Overshirt, Khaki, 6
+          </li>
+        </ol>
       </div>
+
       <div
-        class="oneProduct d-flex flex-lg-row flex-column justify-content-between pb-5"
+        class="oneProduct d-flex flex-lg-row flex-column justify-content-between"
       >
         <div class="sliderCon">
           <div class="gallery-container">
@@ -130,15 +139,23 @@
                 </div>
               </div>
             </div>
-            <div class="heart d-flex justify-content-center align-items-center">
-              <i class="bi-heart"></i>
-            </div>
-            <div class="share d-flex justify-content-center align-items-center">
-              <i class="bi bi-box-arrow-up"></i>
-            </div>
-            <div class="d-flex flex-column gap-md-5 gap-4 btnsCon">
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+            <div class="d-flex flex-column justify-content-between btnsCon">
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="heart d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi-heart"></i>
+                </div>
+                <div
+                  class="share d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi bi-box-arrow-up"></i>
+                </div>
+              </div>
+              <div class="d-flex flex-column gap-5">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
             </div>
             <div class="swiper thumb-swiper">
               <div class="swiper-wrapper">
@@ -166,7 +183,7 @@
           </div>
         </div>
         <div class="productDetails">
-          <div class="top pb-4">
+          <div class="top pb-3">
             <p class="productName">John Lewis ANYDAY</p>
             <h2 class="text-primary mt-3">Long Sleeve Overshirt, Khaki, 6</h2>
             <div class="d-flex justify-content-between align-items-center mt-3">
@@ -184,11 +201,9 @@
               </div>
             </div>
           </div>
-          <div
-            class="d-flex flex-column justify-content-between h-75 gap-lg-0 gap-4"
-          >
+          <div class="d-flex flex-column justify-content-between h-75 gap-4">
             <div class="Description mt-3">
-              <h4>Description:</h4>
+              <h3>Description:</h3>
               <div>
                 <p id="text">
                   Boba etiam ut bulla tea est potus dilectus singulari
@@ -201,7 +216,9 @@
                   in fundo potus inventas, quae typice lacte tea nigro
                   sapiuntur. Boba phaenomenon.
                 </p>
-                <span id="toggle-btn" class="text-primary">See more</span>
+                <a class="text-primary text-decoration-none" href="#"
+                  >See more</a
+                >
               </div>
             </div>
             <div class="colorCon">
@@ -266,7 +283,7 @@
             <div
               class="btns d-flex flex-md-row flex-column align-items-center justify-content-between gap-4"
             >
-              <button class="addToCart">Add To Cart</button>
+              <button class="addToCart btn-primary">Add To Cart</button>
               <button class="checkout">Checkout Now</button>
             </div>
             <a class="delivery d-lg-block d-none">Delivery T&C</a>
@@ -275,131 +292,141 @@
       </div>
       <div class="relatedProducts py-5">
         <div class="d-flex justify-content-between align-items-center header">
-          <p class="text-primary">Related Product</p>
+          <h2 class="text-primary">Related Product</h2>
           <a href="#">View All</a>
         </div>
         <div class="mt-3 allProducts w-100">
-          <div
-            class="d-flex justify-content-between gap-4 w-100 flex-lg-nowrap flex-wrap"
-          >
-            <div class="singleProduct d-flex flex-column gap-2">
-              <div class="imgCon w-100">
-                <img
-                  src="assets/Images/pro1.png"
-                  alt="product1"
-                  class="img-fluid"
-                />
-              </div>
-              <p class="proName text-primary">Whistle</p>
-              <p class="proPrice text-primary">$26</p>
-              <p class="desc">Wide Leg Cropped Jeans, Denim</p>
-              <div class="d-flex align-items-center gap-2">
-                <div class="rate d-flex align-items-center gap-1">
-                  <i class="bi-star-fill"></i>
-                  <p class="ratingNumber">4.8</p>
+          <div class="row justify-content-between w-100 g-4 flex-wrap">
+            <div class="col-lg-2 col-6">
+              <div class="singleProduct d-flex flex-column gap-2 w-100">
+                <div class="imgCon w-100">
+                  <img
+                    src="assets/Images/pro1.png"
+                    alt="product1"
+                    class="img-fluid"
+                  />
                 </div>
-                <div class="dot"></div>
-                <p class="soldItems">1,238 Sold</p>
+                <h3 class="proName text-primary">Whistle</h3>
+                <p class="proPrice text-primary">$26</p>
+                <p class="desc">Wide Leg Cropped Jeans, Denim</p>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="rate d-flex align-items-center gap-1">
+                    <i class="bi-star-fill"></i>
+                    <p class="ratingNumber">4.8</p>
+                  </div>
+                  <div class="dot"></div>
+                  <p class="soldItems">1,238 Sold</p>
+                </div>
               </div>
             </div>
-            <div class="singleProduct d-flex flex-column gap-2">
-              <div class="imgCon w-100">
-                <img
-                  src="assets/Images/5434441dcbb22acc3badb1460deb6ac9.pngpro2.png"
-                  alt="product2"
-                  class="img-fluid"
-                />
-              </div>
-              <p class="proName text-primary">John Lewis ANYDAY</p>
-              <p class="proPrice text-primary">$26</p>
-              <p class="desc">Long Sleeve Utility Shirt, Navy, 6</p>
-              <div class="d-flex align-items-center gap-2">
-                <div class="rate d-flex align-items-center gap-1">
-                  <i class="bi-star-fill fs-4"></i>
-                  <p class="ratingNumber">4.8</p>
+            <div class="col-lg-2 col-6">
+              <div class="singleProduct d-flex flex-column gap-2 w-100">
+                <div class="imgCon w-100">
+                  <img
+                    src="assets/Images/5434441dcbb22acc3badb1460deb6ac9.pngpro2.png"
+                    alt="product2"
+                    class="img-fluid"
+                  />
                 </div>
-                <div class="dot"></div>
-                <p class="soldItems">1,238 Sold</p>
+                <h3 class="proName text-primary">John Lewis ANYDAY</h3>
+                <p class="proPrice text-primary">$26</p>
+                <p class="desc">Long Sleeve Utility Shirt, Navy, 6</p>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="rate d-flex align-items-center gap-1">
+                    <i class="bi-star-fill fs-4"></i>
+                    <p class="ratingNumber">4.8</p>
+                  </div>
+                  <div class="dot"></div>
+                  <p class="soldItems">1,238 Sold</p>
+                </div>
               </div>
             </div>
-            <div class="singleProduct d-flex flex-column gap-2">
-              <div class="imgCon w-100">
-                <img
-                  src="assets/Images/pro3.png"
-                  alt="product3"
-                  class="img-fluid"
-                />
-              </div>
-              <p class="proName text-primary">John Lewis ANYDAY</p>
-              <p class="proPrice text-primary">$32</p>
-              <p class="desc">Stripe Curved Hem Shirt, Blue</p>
-              <div class="d-flex align-items-center gap-2">
-                <div class="rate d-flex align-items-center gap-1">
-                  <i class="bi-star-fill fs-4"></i>
-                  <p class="ratingNumber">4.5</p>
+            <div class="col-lg-2 col-6">
+              <div class="singleProduct d-flex flex-column gap-2 w-100">
+                <div class="imgCon w-100">
+                  <img
+                    src="assets/Images/pro3.png"
+                    alt="product3"
+                    class="img-fluid"
+                  />
                 </div>
-                <div class="dot"></div>
-                <p class="soldItems">620 Sold</p>
+                <h3 class="proName text-primary">John Lewis ANYDAY</h3>
+                <p class="proPrice text-primary">$32</p>
+                <p class="desc">Stripe Curved Hem Shirt, Blue</p>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="rate d-flex align-items-center gap-1">
+                    <i class="bi-star-fill fs-4"></i>
+                    <p class="ratingNumber">4.5</p>
+                  </div>
+                  <div class="dot"></div>
+                  <p class="soldItems">620 Sold</p>
+                </div>
               </div>
             </div>
-            <div class="singleProduct d-flex flex-column gap-2">
-              <div class="imgCon w-100">
-                <img
-                  src="assets/Images/pro4.png"
-                  alt="product4"
-                  class="Stripe Curved Hem Shirt, Blue"
-                />
-              </div>
-              <p class="proName text-primary">John Lewis ANYDAY</p>
-              <p class="proPrice text-primary">$40</p>
-              <p class="desc">Denim Overshirt, Mid Wash</p>
-              <div class="d-flex align-items-center gap-2">
-                <div class="rate d-flex align-items-center gap-1">
-                  <i class="bi-star-fill fs-4"></i>
-                  <p class="ratingNumber">4.6</p>
+            <div class="col-lg-2 col-6">
+              <div class="singleProduct d-flex flex-column gap-2 w-100">
+                <div class="imgCon w-100">
+                  <img
+                    src="assets/Images/pro4.png"
+                    alt="product4"
+                    class="Stripe Curved Hem Shirt, Blue"
+                  />
                 </div>
-                <div class="dot"></div>
-                <p class="soldItems">238 Sold</p>
+                <h3 class="proName text-primary">John Lewis ANYDAY</h3>
+                <p class="proPrice text-primary">$40</p>
+                <p class="desc">Denim Overshirt, Mid Wash</p>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="rate d-flex align-items-center gap-1">
+                    <i class="bi-star-fill fs-4"></i>
+                    <p class="ratingNumber">4.6</p>
+                  </div>
+                  <div class="dot"></div>
+                  <p class="soldItems">238 Sold</p>
+                </div>
               </div>
             </div>
-            <div class="singleProduct d-flex flex-column gap-2">
-              <div class="imgCon w-100">
-                <img
-                  src="assets/Images/pro5.png"
-                  alt="product5"
-                  class="img-fluid"
-                />
-              </div>
-              <p class="proName text-primary">John Lewis</p>
-              <p class="proPrice text-primary">$79</p>
-              <p class="desc">Linen Blazer, Navy</p>
-              <div class="d-flex align-items-center gap-2">
-                <div class="rate d-flex align-items-center gap-1">
-                  <i class="bi-star-fill fs-4"></i>
-                  <p class="ratingNumber">4.8</p>
+            <div class="col-lg-2 col-6">
+              <div class="singleProduct d-flex flex-column gap-2 w-100">
+                <div class="imgCon w-100">
+                  <img
+                    src="assets/Images/pro5.png"
+                    alt="product5"
+                    class="img-fluid"
+                  />
                 </div>
-                <div class="dot"></div>
-                <p class="soldItems">1,238 Sold</p>
+                <h3 class="proName text-primary">John Lewis</h3>
+                <p class="proPrice text-primary">$79</p>
+                <p class="desc">Linen Blazer, Navy</p>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="rate d-flex align-items-center gap-1">
+                    <i class="bi-star-fill fs-4"></i>
+                    <p class="ratingNumber">4.8</p>
+                  </div>
+                  <div class="dot"></div>
+                  <p class="soldItems">1,238 Sold</p>
+                </div>
               </div>
             </div>
-            <div class="singleProduct d-lg-none d-flex flex-column gap-2">
-              <div class="imgCon w-100">
-                <img
-                  src="assets/Images/pro6.png"
-                  alt="product6"
-                  class="img-fluid"
-                />
-              </div>
-              <p class="proName text-primary">John Lewis ANYDAY</p>
-              <p class="proPrice text-primary">$26</p>
-              <p class="desc">Long Sleeve Utility Shirt, Navy, 6</p>
-              <div class="d-flex align-items-center gap-2">
-                <div class="rate d-flex align-items-center gap-1">
-                  <i class="bi-star-fill fs-4"></i>
-                  <p class="ratingNumber">4.8</p>
+            <div class="col-lg-2 col-6 d-lg-none">
+              <div class="singleProduct d-flex flex-column gap-2 w-100">
+                <div class="imgCon w-100">
+                  <img
+                    src="assets/Images/pro6.png"
+                    alt="product6"
+                    class="img-fluid"
+                  />
                 </div>
-                <div class="dot"></div>
-                <p class="soldItems">1,238 Sold</p>
+                <h3 class="proName text-primary">John Lewis ANYDAY</h3>
+                <p class="proPrice text-primary">$26</p>
+                <p class="desc">Long Sleeve Utility Shirt, Navy, 6</p>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="rate d-flex align-items-center gap-1">
+                    <i class="bi-star-fill fs-4"></i>
+                    <p class="ratingNumber">4.8</p>
+                  </div>
+                  <div class="dot"></div>
+                  <p class="soldItems">1,238 Sold</p>
+                </div>
               </div>
             </div>
           </div>
@@ -439,8 +466,15 @@
                 <p>5.0</p>
                 <i class="bi-star-fill"></i>
               </div>
-              <div class="ratingCon">
-                <div class="ratingfill" style="width: 80%"></div>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 80%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
               <p class="reviewers">2823</p>
             </div>
@@ -451,8 +485,15 @@
                 <p>4.0</p>
                 <i class="bi-star-fill"></i>
               </div>
-              <div class="ratingCon">
-                <div class="ratingfill" style="width: 25%"></div>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 25%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
               <p class="reviewers">38</p>
             </div>
@@ -463,8 +504,15 @@
                 <p>3.0</p>
                 <i class="bi-star-fill"></i>
               </div>
-              <div class="ratingCon">
-                <div class="ratingfill" style="width: 10%"></div>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 10%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
               <p class="reviewers">4</p>
             </div>
@@ -475,8 +523,15 @@
                 <p>2.0</p>
                 <i class="bi-star-fill"></i>
               </div>
-              <div class="ratingCon">
-                <div class="ratingfill" style="width: 0"></div>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 0"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
               <p class="reviewers">0</p>
             </div>
@@ -487,8 +542,15 @@
                 <p>1.0</p>
                 <i class="bi-star-fill"></i>
               </div>
-              <div class="ratingCon">
-                <div class="ratingfill" style="width: 0"></div>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 0"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
               <p class="reviewers">0</p>
             </div>

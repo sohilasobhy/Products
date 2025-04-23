@@ -89,6 +89,16 @@ body {
         @include text-style($primary, 16px, 500);
       }
     }
+    .nav-item {
+      .counter {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $primary;
+        @include text-style(white, 8px, 500);
+        @include position(absolute, -15%, 30%, null, null);
+      }
+    }
     .navbar-toggler {
       &:focus {
         box-shadow: 0 0 0;
@@ -97,10 +107,11 @@ body {
   }
   .links {
     color: $secondry;
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: ">";
+    }
     a {
       text-decoration: none;
-    }
-    .pastLinks {
       @include text-style($secondry, null, 500);
       @media (min-width: 992px) {
         font-size: 16px;
@@ -112,7 +123,7 @@ body {
         font-size: 13px;
       }
     }
-    .current {
+    .active {
       @include text-style($primary, 16px, 500);
       @media (min-width: 992px) {
         font-size: 16px;
@@ -128,6 +139,7 @@ body {
   .oneProduct {
     gap: 6rem;
     border-bottom: 0.5px dashed #a3a3a3;
+    padding-bottom: 5rem;
     .sliderCon {
       .gallery-container {
         position: relative;
@@ -135,9 +147,7 @@ body {
         flex-direction: column;
         align-items: center;
         margin: auto;
-        @media (min-width: 992px) {
-          max-width: 450px;
-        }
+
         @media (max-width: 991.86px) and (min-width: 768px) {
           max-width: 450px;
         }
@@ -165,6 +175,10 @@ body {
             cursor: pointer;
             background-color: #ebebeb;
             border-radius: 8px;
+            opacity: 0.4;
+          }
+          .swiper-slide-thumb-active {
+            opacity: 1;
           }
           img {
             width: 100%;
@@ -180,7 +194,6 @@ body {
           background-color: $bg-color;
           border-radius: 8px;
           z-index: 10;
-          top: auto;
           color: $primary;
           @media (min-width: 992px) {
             width: 50px;
@@ -195,11 +208,8 @@ body {
             height: 40px;
           }
         }
-        .btnsCon,
-        .share,
-        .heart {
+        .btnsCon {
           position: absolute;
-          transform: translateY(-50%);
           right: -60px;
           i {
             @media (min-width: 992px) {
@@ -214,7 +224,8 @@ body {
           }
         }
         .btnsCon {
-          bottom: 10%;
+          top: 0;
+          height: 83%;
         }
         .swiper-button-next {
           bottom: 13%;
@@ -354,7 +365,7 @@ body {
         }
       }
       .Description {
-        h4 {
+        h3 {
           @include text-style($primary, null, 600);
           @media (min-width: 992px) {
             font-size: 20px;
@@ -417,6 +428,7 @@ body {
         }
         .colorSelection {
           .color-btn {
+            cursor: pointer;
             border: 1px solid #ddd;
             border-radius: 8px;
             width: 75px;
@@ -428,9 +440,8 @@ body {
               display: none;
             }
             label {
-              width: 75px;
-              height: 40px;
               border-radius: 8px;
+              cursor: pointer;
               &.color1 {
                 background-color: #534029;
               }
@@ -443,13 +454,37 @@ body {
               &.color4 {
                 background-color: #11171d;
               }
+              @media (min-width: 992px) {
+                width: 75px;
+                height: 40px;
+              }
+              @media (max-width: 991.86px) and (min-width: 768px) {
+                width: 75px;
+                height: 40px;
+              }
+              @media (max-width: 768px) {
+                width: 60px;
+                height: 30px;
+              }
             }
             &:has(input:checked) {
               border: 1px solid $primary;
             }
             input:checked + label {
-              width: 63px;
-              height: 28px;
+              width: 85%;
+              height: 80%;
+            }
+            @media (min-width: 992px) {
+              width: 75px;
+              height: 40px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              width: 75px;
+              height: 40px;
+            }
+            @media (max-width: 768px) {
+              width: 60px;
+              height: 30px;
             }
           }
         }
@@ -489,16 +524,17 @@ body {
             background-color: #ffffff;
             border: 1px solid #e6e6e6;
             border-radius: 8px;
-            width: 75px;
-            height: 40px;
+
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
             input {
               display: none;
             }
             label {
               @include text-style($primary, 20px, #525252);
+              cursor: pointer;
             }
             &:has(input:checked) {
               border: 1px solid $primary;
@@ -507,28 +543,41 @@ body {
             input:checked + label {
               @include text-style($primary, 20px, 600);
             }
+            @media (min-width: 992px) {
+              width: 75px;
+              height: 40px;
+            }
+            @media (max-width: 991.86px) and (min-width: 768px) {
+              width: 75px;
+              height: 40px;
+            }
+            @media (max-width: 768px) {
+              width: 60px;
+              height: 30px;
+            }
           }
         }
       }
       .btns {
         .addToCart {
-          background-color: $primary;
-          border: 0;
-          border-radius: 8px;
           padding: 17px 0;
-          @include text-style(#ffffff, 20px, 600);
+          @include text-style(#ffffff, null, 600);
           align-self: flex-start;
           @media (min-width: 992px) {
             width: 60%;
+            font-size: 20px;
           }
           @media (max-width: 991.86px) and (min-width: 768px) {
-            width: 60%;
+            width: 50%;
+            font-size: 19px;
           }
           @media (max-width: 768px) and (min-width: 350px) {
             width: 300px;
+            font-size: 18px;
           }
           @media (max-width: 350px) {
             width: 100%;
+            font-size: 18px;
           }
         }
         .checkout {
@@ -536,16 +585,19 @@ body {
           border: 1px solid #b8b8b8;
           border-radius: 8px;
           padding: 17px 0;
-          @include text-style($primary, 20px, 500);
+          @include text-style($primary, null, 500);
           @media (min-width: 992px) {
             width: 30%;
+            font-size: 20px;
           }
           @media (max-width: 991.86px) and (min-width: 768px) {
             width: 30%;
+            font-size: 19px;
           }
           @media (max-width: 768px) {
             width: 190px;
             align-self: flex-start;
+            font-size: 18px;
           }
         }
       }
@@ -563,7 +615,7 @@ body {
   .relatedProducts {
     border-bottom: 0.5px dashed $secondry;
     .header {
-      p {
+      h2 {
         font-size: 28px;
       }
       a {
@@ -662,12 +714,6 @@ body {
             }
           }
         }
-        @media (min-width: 992px) {
-          width: 19%;
-        }
-        @media (max-width: 991.86px) {
-          width: 45%;
-        }
       }
     }
   }
@@ -691,11 +737,7 @@ body {
           width: 84px;
           height: 84px;
           border-radius: 50%;
-          background: conic-gradient(
-            #ffa439 0% 10%,
-            #e0e0e0 10% 30%,
-            #ffa439 30% 100%
-          );
+          background: conic-gradient(#ffa726 calc($rateValue * 1%), #e0e0e0 0);
           .innerCircle {
             background-color: white;
             width: 85%;
@@ -736,6 +778,7 @@ body {
         .oneRating {
           width: 100%;
           .starNum {
+            min-width: 50px;
             p {
               @include text-style($primary, null, 500);
               @media (min-width: 992px) {
@@ -752,18 +795,16 @@ body {
               color: #ffa439;
             }
           }
-          .ratingCon {
+          .progress {
             background-color: $bg-color;
             height: 8px;
-            border-radius: 8px;
             width: 85%;
-            .ratingfill {
+            .progress-bar {
               background-color: $primary;
-              height: 100%;
-              border-radius: 8px;
             }
           }
           .reviewers {
+            min-width: 50px;
             @include text-style($primary, null, 500);
             @media (min-width: 992px) {
               font-size: 16px;

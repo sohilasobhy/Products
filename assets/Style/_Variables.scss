@@ -4,10 +4,15 @@ $bg-color: #f2f2f2;
 $theme-colors: (
   primary: #141414,
 );
-
+$rateValue: 75;
 @each $color, $value in $theme-colors {
   .text-#{"" + $color} {
     color: $value !important;
     font-weight: 600 !important;
+  }
+  .btn-#{"" + $color} {
+    background-color: $value !important;
+    border-color: $value;
+    border-radius: 8px;
   }
 }
