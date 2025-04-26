@@ -34,7 +34,7 @@ body {
         background-color: rgba(0, 0, 0, 0.596);
         height: 100vh;
         width: 100%;
-        z-index: 1;
+        z-index: 999;
       }
     }
   }
@@ -44,9 +44,7 @@ body {
   .sideMenu {
     &.show {
       @media (max-width: 992px) {
-        position: fixed;
-        top: 0;
-        right: 0;
+        @include position(fixed, 0, 0, null, null);
         height: 100vh;
         width: 250px;
         background-color: white;
@@ -80,7 +78,9 @@ body {
   }
   nav {
     border-bottom: 0.5px dashed #a3a3a3;
-    overflow-x: hidden;
+    .changeLang {
+      cursor: pointer;
+    }
     .nav-item,
     .search,
     .closeMenu {
@@ -89,16 +89,15 @@ body {
         @include text-style($primary, 16px, 500);
       }
     }
-    .nav-item {
-      .counter {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: $primary;
-        @include text-style(white, 8px, 500);
-        @include position(absolute, -15%, 30%, null, null);
-      }
+    .counter {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $primary;
+      @include text-style(white, 8px, 500);
+      @include position(absolute, -15%, 30%, null, null);
     }
+
     .navbar-toggler {
       &:focus {
         box-shadow: 0 0 0;
@@ -191,6 +190,7 @@ body {
         .swiper-button-next,
         .share,
         .heart {
+          cursor: pointer;
           background-color: $bg-color;
           border-radius: 8px;
           z-index: 10;
@@ -209,8 +209,8 @@ body {
           }
         }
         .btnsCon {
-          position: absolute;
-          right: -60px;
+          @include position(absolute, 0, -60px, null, null);
+          height: 83%;
           i {
             @media (min-width: 992px) {
               font-size: 25px;
@@ -223,28 +223,12 @@ body {
             }
           }
         }
-        .btnsCon {
-          top: 0;
-          height: 83%;
-        }
         .swiper-button-next {
-          bottom: 13%;
           position: static;
         }
         .swiper-button-prev {
           left: auto;
-          bottom: calc(28% - 30px);
           position: static;
-        }
-        .swiper-button-prev.swiper-button-disabled,
-        .swiper-button-next.swiper-button-disabled {
-          opacity: 1 !important;
-        }
-        .share {
-          top: 25px;
-        }
-        .heart {
-          top: 90px;
         }
         .swiper-button-next:after,
         .swiper-button-prev:after {
@@ -524,7 +508,6 @@ body {
             background-color: #ffffff;
             border: 1px solid #e6e6e6;
             border-radius: 8px;
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -560,15 +543,15 @@ body {
       }
       .btns {
         .addToCart {
-          padding: 17px 0;
           @include text-style(#ffffff, null, 600);
+          padding: 17px 0;
           align-self: flex-start;
           @media (min-width: 992px) {
             width: 60%;
             font-size: 20px;
           }
           @media (max-width: 991.86px) and (min-width: 768px) {
-            width: 50%;
+            width: 60%;
             font-size: 19px;
           }
           @media (max-width: 768px) and (min-width: 350px) {
@@ -587,11 +570,11 @@ body {
           padding: 17px 0;
           @include text-style($primary, null, 500);
           @media (min-width: 992px) {
-            width: 30%;
+            width: 40%;
             font-size: 20px;
           }
           @media (max-width: 991.86px) and (min-width: 768px) {
-            width: 30%;
+            width: 40%;
             font-size: 19px;
           }
           @media (max-width: 768px) {
@@ -923,3 +906,9 @@ body {
     }
   }
 }
+// [dir="ltr"] & {
+//   padding: 0.25rem 2rem 0.25rem 0.5rem;
+// }
+// [dir="rtl"] & {
+//   padding: 0.25rem 0.5rem 0.25rem 2rem;
+// }

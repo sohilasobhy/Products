@@ -31,4 +31,14 @@
   @if ($left != null) {
     left: $left;
   }
+  [dir="rtl"] & {
+    @if ($left != null and $right == null) {
+      right: $left;
+      left: auto;
+    }
+    @if ($right != null and $left == null) {
+      left: $right;
+      right: auto;
+    }
+  }
 }

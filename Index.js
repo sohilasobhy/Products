@@ -28,14 +28,16 @@ const mainSwiper = new Swiper(".main-swiper", {
 const btn = document.getElementById('toggle-btn');
 const text = document.getElementById('text');
 
+function switchtoEN() {
+    window.location.href = "Index.html";
+}
+function switchtoAr() {
+    window.location.href = "IndexAR.html";
+}
 
 
 
-
-
-
-
-
+console.log("eeeee")
 
 
 
